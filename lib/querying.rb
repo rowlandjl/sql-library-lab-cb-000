@@ -1,5 +1,5 @@
 def select_books_titles_and_years_in_first_series_order_by_year
-  "select title, min(year) from books inner join series on books.series_id = series.id group by title order by min(year);"
+  "select books.title, min(year) from books inner join series on books.series_id = series.id group by books.title order by min(year);"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
