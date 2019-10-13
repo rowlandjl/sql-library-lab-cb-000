@@ -12,7 +12,7 @@ def select_value_and_count_of_most_prolific_species
 end
 
 def select_name_and_series_subgenres_of_authors
-  "select * from series left join subgenres on series.subgenre_id = subgenres_id"
+  "select * from series left join subgenres on series.subgenre_id = subgeneres.subgenres_id"
 end
 
 def select_series_title_with_most_human_characters
