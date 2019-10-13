@@ -3,7 +3,7 @@ def select_books_titles_and_years_in_first_series_order_by_year
 end
 
 def select_name_and_motto_of_char_with_longest_motto
-  "select name, motto from characters where id = (select id, max(length(motto)) from characters order by max(length(motto)) desc limit 1);"
+  "select name, motto from characters where id = (select id, max(length(motto)) from characters group by id order by max(length(motto)) desc limit 1);"
 end
 
 
