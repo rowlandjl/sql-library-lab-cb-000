@@ -20,8 +20,7 @@ def select_series_title_with_most_human_characters
   from series 
   left join authors on series.author_id = authors.id 
   left join characters on authors.id = characters.author_id
-  group by title
-  having count(characters.id) = max(count(characters.id));"
+  where species = 'human';" 
 end
 
 def select_character_names_and_number_of_books_they_are_in
