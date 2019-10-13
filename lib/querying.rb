@@ -21,6 +21,7 @@ def select_series_title_with_most_human_characters
   left join authors on series.author_id = authors.id 
   left join characters on authors.id = characters.author_id
   where species = 'human'
+  group by title 
   order by count(characters.id) desc limit 1;" 
 end
 
