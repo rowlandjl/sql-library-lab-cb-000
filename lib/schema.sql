@@ -20,4 +20,4 @@ CREATE TABLE books (
   title TEXT,
   year INTEGER,
   series_id INTEGER 
-)
+);
